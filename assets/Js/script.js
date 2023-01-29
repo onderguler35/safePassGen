@@ -1,10 +1,9 @@
 // Function for getting a random element from an array
-// each time it's called it will generate a random character from the pool of selected arrays and return it  
+// each time it's called it will generate a random character from the pool of selected arrays and return it
 function getRandom(arr) {
   var randomChar = arr[Math.floor(Math.random() * arr.length)];
   return randomChar;
 }
-
 
 //below function will get the arrays that will be needed as selection pool according to user confirmations
 //and will validate at least one option is selected
@@ -20,7 +19,9 @@ function selectedArrays() {
     selectArray = selectArray.concat(specialCharacters);
   }
 
-  var numChar = confirm("Numbers will be included unless you click cancel?");
+  var numChar = confirm(
+    "Numbers will be included unless you click cancel?"
+    );
   if (numChar) {
     selectArray = selectArray.concat(numericCharacters);
   }
@@ -49,7 +50,6 @@ function selectedArrays() {
   return selectArray;
 }
 
-
 // Function to prompt user for password length required, and validate it
 function promptPassLength() {
   var passLength = prompt(
@@ -59,11 +59,12 @@ function promptPassLength() {
   // validating if the input is a number of if fitting requirements of 10-64 characters
   if (isNaN(passLength) || passLength < 10 || passLength > 64) {
     // if not valid, then alerting user,
-    alert("You did not enter a number between 10-64, please click OK to try again");
+    alert(
+      "You did not enter a number between 10-64, please click OK to try again"
+    );
     promptPassLength(); //and recursing the prompt function
   } else return passLength;
 }
-
 
 // Function to generate password with user input
 function generatePassword() {
@@ -80,14 +81,12 @@ function generatePassword() {
   return password;
 }
 
-
 // Write password to the #password input
 function writePassword() {
   var password = generatePassword();
   var passwordText = document.querySelector("#password");
   passwordText.value = password;
 }
-
 
 function init() {
   // Get references to the #generate element
