@@ -15,6 +15,8 @@
 This app is a browser application which accepts input from the user through window prompt and confirm commands.
 Using the response from the user, it generates a 10-64 digits password which may include special characters, numbers, upper case and lower case letters. 
 
+![screen shot](assets/images/Capture.JPG)  
+
 ## Installation
 You can go to the Github Pages deployement of the app by clicking [here](https://onderguler35.github.io/safePassGen)
 
