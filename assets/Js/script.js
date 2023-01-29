@@ -43,7 +43,7 @@ function selectedArrays() {
   // if user selected at least one option our array can not be empty, so let's use this logic to validate input
   if (selectArray.length === 0) {
     alert("You did not select any of the options, please try again");
-    selectedArrays();
+    selectedArrays(); //recursion : user sent back to answer options because none were selected.
   }
 
   //if validated fine, we should have the selected arrays gathered in our selectArray below. Let's return the value of it.
